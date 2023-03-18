@@ -1,5 +1,8 @@
-package week1.first;
+package week1;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MockTest {
@@ -12,17 +15,9 @@ Testcase 3 Easy         Hidden case     Success         35     0.5546 sec  102 K
 Testcase 4 Easy         Hidden case     Terminated
                                         due to timeout  0      4.0155 sec  199 KB
      */
-    public static int findMedian(List<Integer> arr) {
+    public int findMedian(List<Integer> arr) {
         // Write your code here
-        for (int i = 0; i < arr.size(); i++) {
-            for (int j = i; j < arr.size(); j++) {
-                if (arr.get(j) < arr.get(i)) {
-                    int temp = arr.get(i);
-                    arr.set(i, arr.get(j));
-                    arr.set(j, temp);
-                }
-            }
-        }
+        arr.sort(Comparator.comparingInt(a -> a));
         return arr.get(arr.size() / 2);
     }
 
@@ -52,4 +47,16 @@ Testcase 4 Easy         Hidden case     Terminated
 
         return resp;
     }
+
+    //5 marzo 2023
+    public int flippingMatrix1(List<List<Integer>> matrix){
+        for (int i = 0; i < matrix.size(); i++) {
+            for (int j = 0; j < matrix.get(i).size(); j++) {
+                int x = 8;
+            }
+        }
+        return 0;
+    }
+
+
 }

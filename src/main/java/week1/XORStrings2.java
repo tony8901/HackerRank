@@ -1,4 +1,4 @@
-package week1.first;
+package week1;
 
 public class XORStrings2 {
 
