@@ -2,8 +2,6 @@ package week2;
 
 import java.util.*;
 import java.lang.*;
-import java.io.*;
-import java.math.*;
 public class ZigZagSequence {
 
     public static void main (String[] args) throws java.lang.Exception {
@@ -19,7 +17,7 @@ public class ZigZagSequence {
         }
     }
 
-    //PENDIENTE!!!!
+
     public static void findZigZagSequence(int [] a, int n){
         Arrays.sort(a);
         int mid = n/2;
@@ -30,9 +28,9 @@ public class ZigZagSequence {
         int st = mid + 1;
         int ed = n - 2;
         while(st <= ed){
-            temp = a[ed];
-            a[ed] = a[st];
-            a[st] = temp;
+            temp = a[st];
+            a[st] = a[ed];
+            a[ed] = temp;
             st = st + 1;
             ed = ed - 1;
         }

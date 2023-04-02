@@ -1,6 +1,5 @@
 package week2;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -8,10 +7,11 @@ public class SalesbyMatch {
 
     public static int sockMerchant(int n, List<Integer> ar) {
         // Write your code here
+
         int cont = 0;
         int flag = 0;
-        for (int index = 0; index < ar.size(); index++) {
-            for (int i = index; i < ar.size(); i++) {
+        for (int index = 0; index < n; index++) {
+            for (int i = index; i < n; i++) {
                 if(index != i){
                     if(ar.get(index) == ar.get(i)){
                         if(flag == 0){
